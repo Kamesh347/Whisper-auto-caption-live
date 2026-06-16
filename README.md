@@ -883,3 +883,160 @@ If you have any kind of feedback about this project feel free to use the Discuss
 You can use the [Show and tell](https://github.com/ggml-org/whisper.cpp/discussions/categories/show-and-tell) category
 to share your own projects that use `whisper.cpp`. If you have a question, make sure to check the
 [Frequently asked questions (#126)](https://github.com/ggml-org/whisper.cpp/discussions/126) discussion.
+
+
+
+
+=========================================================
+
+
+# Whisper Auto Caption Live
+
+Real-time speech-to-text captioning system powered by Whisper.cpp. This project captures live audio, generates captions with low latency, and can be integrated with AI assistants such as ChatGPT for real-time meeting assistance.
+
+---
+
+## Features
+
+* 🎤 Real-time audio transcription
+* ⚡ Fast local speech-to-text processing
+* 🖥️ Works with online meetings (Google Meet, Microsoft Teams, Zoom, etc.)
+* 🔒 Fully local processing (no cloud dependency required)
+* 🤖 Can be integrated with ChatGPT or other AI assistants
+* 🌐 Supports English and multiple languages through Whisper models
+
+---
+
+## Tech Stack
+
+* C++
+* Whisper.cpp
+* GGML Models
+* Windows
+* Python (optional automation scripts)
+
+---
+
+## Project Structure
+
+```text
+whisper.cpp/
+│
+├── models/                 # Whisper models
+├── samples/                # Sample audio files
+├── scripts/                # Automation scripts
+├── build/                  # Build output
+├── README.md
+└── ...
+```
+
+---
+
+## Installation
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Kamesh347/Whisper-auto-caption-live.git
+cd Whisper-auto-caption-live
+```
+
+### 2. Download Whisper Model
+
+Example:
+
+```bash
+ggml-tiny.en.bin
+```
+
+Place the model file inside the models directory.
+
+### 3. Build Project
+
+```bash
+cmake -B build
+cmake --build build --config Release
+```
+
+---
+
+## Usage
+
+Run Whisper transcription:
+
+```bash
+main.exe -m models/ggml-tiny.en.bin -f sample.wav
+```
+
+Example output:
+
+```text
+Hello everyone, welcome to the meeting.
+Today we will discuss project updates.
+```
+
+---
+
+## Real-Time Workflow
+
+```text
+Google Meet / Teams
+        ↓
+ System Audio Capture
+        ↓
+    Whisper.cpp
+        ↓
+ Live Caption Text
+        ↓
+  AI Assistant
+        ↓
+ Suggested Responses
+```
+
+---
+
+## Supported Models
+
+| Model  | Speed   | Accuracy |
+| ------ | ------- | -------- |
+| Tiny   | Fastest | Basic    |
+| Base   | Fast    | Good     |
+| Small  | Medium  | Better   |
+| Medium | Slow    | High     |
+| Large  | Slowest | Best     |
+
+---
+
+## Roadmap
+
+* [ ] Live microphone transcription
+* [ ] System audio capture
+* [ ] Auto-copy captions
+* [ ] ChatGPT integration
+* [ ] GUI application
+* [ ] Multi-language support
+
+---
+
+## Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## License
+
+This project is provided for educational and research purposes.
+
+---
+
+## Author
+
+**Kamesh**
+
+GitHub: https://github.com/Kamesh347
